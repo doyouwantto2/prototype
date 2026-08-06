@@ -7,7 +7,7 @@ cd contracts
   forge script script/DeployDisputeResolver.s.sol --rpc-url http://localhost:8545 --broadcast
 cd ..
 
-cd frontend
+cd core
   bun install
   bun run build
 cd ..
