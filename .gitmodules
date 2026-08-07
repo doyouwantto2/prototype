@@ -1,7 +1,0 @@
-[submodule "contracts"]
-	path = contracts
-	url = ./contracts/
-
-[submodule "core"]
-  path = "core"
-  url = ./core/
