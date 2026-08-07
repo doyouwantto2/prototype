@@ -41,7 +41,7 @@ erDiagram
     asset {
         int id PK
         string title
-        int bond
+        float bond
         int claimant_id FK
     }
 
