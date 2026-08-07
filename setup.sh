@@ -1,6 +1,11 @@
 mkdir storage/deployments
 
 cd contracts
+  git rm -f --cached -r lib/forge-std 2>/dev/null || true
+  rm -rf lib/forge-std
+  rm -f .gitmodules
+  git config --remove-section submodule.lib/forge-std 2>/dev/null || true
+
   forge install foundry-rs/forge-std
   forge build 
 
