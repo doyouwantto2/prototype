@@ -48,9 +48,10 @@ erDiagram
     dispute {
         int id PK
         string name
-        string result
+        string decision
         string reason
-        string reputation
+        float percentage_for_winner
+        float score_median
         string status
         int topic_id FK
         int claimant_id FK
