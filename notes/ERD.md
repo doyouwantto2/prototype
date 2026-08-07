@@ -45,10 +45,9 @@ erDiagram
     }
 
     vote {
-        int id PK
+        int user_id "PK,FK"
+        int dispute_id "PK,FK"
         float value
         date created_at
-        int user_id FK
-        int dispute_id FK
     }
 ```
