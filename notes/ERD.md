@@ -4,7 +4,7 @@ erDiagram
     user ||--o{ comment : create
     topic ||--o{ comment : contain
     user ||--o{ dispute : participate
-    topic ||--o| dispute : "belong to"
+    dispute ||--o| topic : "have at least"
     dispute ||--o{ vote : have
     user ||--o{ vote : have
 
