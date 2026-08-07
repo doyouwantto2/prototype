@@ -3,7 +3,7 @@ erDiagram
     user ||--o{ topic : create
     user ||--o{ comment : create
     topic ||--o{ comment : contain
-    user ||--o{ dispute : open
+    user ||--o{ dispute : "participate in"
     topic |o--|| dispute : triggers
     dispute ||--o{ vote : have
     user ||--o{ vote : have
