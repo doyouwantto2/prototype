@@ -7,6 +7,8 @@ erDiagram
     topic |o--|| dispute : triggers
     dispute ||--o{ vote : have
     user ||--o{ vote : have
+    asset ||--o{ dispute : "being challenged"
+    user ||--o{ asset : publish
 
     user {
         int id PK
@@ -36,12 +38,25 @@ erDiagram
         int topic_id FK
     }
 
+    asset {
+        int id PK
+        string title
+        int bond
+        int claimant_id FK
+    }
+
     dispute {
         int id PK
         string name
+        string result
+        string reason
+        string reputation
         string status
         int topic_id FK
-        int participant_id FK
+        int claimant_id FK
+        int adjudicator_id FK
+        int challenger_id FK
+        int asset_id FK
     }
 
     vote {
