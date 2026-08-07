@@ -3,8 +3,8 @@ erDiagram
     user ||--o{ topic : create
     user ||--o{ comment : create
     topic ||--o{ comment : contain
-    user ||--o{ dispute : participate
-    dispute ||--o| topic : "have at least"
+    user ||--o{ dispute : open
+    topic |o--|| dispute : triggers
     dispute ||--o{ vote : have
     user ||--o{ vote : have
 
