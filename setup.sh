@@ -16,6 +16,8 @@ cd ..
 
 cd core
   bun install
+  bunx --bun prisma migrate dev --name init
+  bunx --bun prisma generate
   bun run build
 cd ..
 
