@@ -1,0 +1,108 @@
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id             Int       @id @default(autoincrement())
+  name           String
+  email          String    @unique
+  password       String
+  point     Int       @default(0)
+  status         String    @default("ACTIVE")
+  wallet_address String?   @unique
+  created_at     DateTime  @default(now())
+
+  topics               Topic[]
+  comments             Comment[]
+  assets               Asset[]
+  disputes_challenger  Dispute[] @relation("ChallengerDisputes")
+  disputes_adjudicator Dispute[] @relation("AdjudicatorDisputes")
+  votes                Vote[]
+
+  @@map("users")
+}
+
+model Topic {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  created_at  DateTime  @default(now())
+  status      String
+  user_id     Int
+  
+  user        User      @relation(fields: [user_id], references: [id])
+  comments    Comment[]
+  disputes    Dispute[]
+
+  @@map("topics")
+}
+
+model Comment {
+  id         Int      @id @default(autoincrement())
+  content    String
+  created_at DateTime @default(now())
+  user_id    Int
+  topic_id   Int
+
+  user       User     @relation(fields: [user_id], references: [id])
+  topic      Topic    @relation(fields: [topic_id], references: [id])
+
+  @@map("comments")
+}
+
+model Asset {
+  id           Int       @id @default(autoincrement())
+  claim        String
+  content_hash String    @unique
+  bond         Int
+  user_id      Int
+  created_at   DateTime  @default(now())
+
+  user         User      @relation(fields: [user_id], references: [id])
+  disputes     Dispute[]
+
+  @@map("assets")
+}
+
+model Dispute {
+  id                    Int      @id @default(autoincrement())
+  decision              String?
+  reason                String?
+  percentage_for_winner Decimal?
+  score_median          Decimal?
+  status                String   @default("PENDING")
+  created_at            DateTime @default(now())
+
+  topic_id              Int
+  asset_id              Int
+  challenger_id         Int
+  adjudicator_id        Int?
+
+  topic                 Topic    @relation(fields: [topic_id], references: [id])
+  asset                 Asset    @relation(fields: [asset_id], references: [id])
+  challenger            User     @relation("ChallengerDisputes", fields: [challenger_id], references: [id])
+  adjudicator           User?    @relation("AdjudicatorDisputes", fields: [adjudicator_id], references: [id])
+  votes                 Vote[]
+
+  @@map("disputes")
+}
+
+model Vote {
+  user_id           Int
+  dispute_id        Int
+  score             Decimal
+  gained_point Int      @default(0)
+  created_at        DateTime @default(now())
+
+  user              User     @relation(fields: [user_id], references: [id])
+  dispute           Dispute  @relation(fields: [dispute_id], references: [id])
+
+  @@id([user_id, dispute_id])
+  @@map("votes")
+}
