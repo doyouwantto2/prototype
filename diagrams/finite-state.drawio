@@ -1,0 +1,61 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="h6XigX8OiTGhMxBOaSUw">
+    <mxGraphModel dx="1406" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-61" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Active" vertex="1">
+          <mxGeometry height="80" width="80" x="420" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-62" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Disputed" vertex="1">
+          <mxGeometry height="80" width="80" x="710" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-63" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Verdict" vertex="1">
+          <mxGeometry height="80" width="80" x="710" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-64" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Revoked" vertex="1">
+          <mxGeometry height="80" width="80" x="420" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-65" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-61" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="NQW0LCumVi7PNFwqW-vc-62" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="400" as="sourcePoint" />
+            <mxPoint x="770" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-66" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-62" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NQW0LCumVi7PNFwqW-vc-63" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="400" as="sourcePoint" />
+            <mxPoint x="770" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-67" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-63" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="NQW0LCumVi7PNFwqW-vc-61" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="400" as="sourcePoint" />
+            <mxPoint x="770" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-68" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-63" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="NQW0LCumVi7PNFwqW-vc-64" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="390" as="sourcePoint" />
+            <mxPoint x="770" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-69" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Voting" vertex="1">
+          <mxGeometry height="80" width="80" x="240" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-70" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-61" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" target="NQW0LCumVi7PNFwqW-vc-69" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="370" as="sourcePoint" />
+            <mxPoint x="430" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NQW0LCumVi7PNFwqW-vc-71" edge="1" parent="1" source="NQW0LCumVi7PNFwqW-vc-64" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" target="NQW0LCumVi7PNFwqW-vc-69" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="370" as="sourcePoint" />
+            <mxPoint x="430" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

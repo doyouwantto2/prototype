@@ -13,3 +13,9 @@ Số lượng người đủ điều kiện làm juror sẽ tương đương v�
 Điểm voter nhận về sau khi đánh giá trọng tài sẽ là phân phối hình quả chuông dựa theo trung vị.
 
 
+Một Claim sẽ có các statemachine như sau, trong đó Voting chỉ xảy ra sau khi đã có phán quyết (verdict):
+![](../diagrams/finite-state.drawio.png)
+
+Một chuỗi các hành động sẽ tương ứng với các hành động như sau:
+![](../diagrams/sequence.drawio.png)
+

@@ -1,0 +1,43 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="WyHWe8LgMev9luH0nH8W">
+    <mxGraphModel dx="937" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-13" edge="1" parent="1" source="oruShV_c51Lq2GvQ4J1f-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="oruShV_c51Lq2GvQ4J1f-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Publish" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-14" edge="1" parent="1" source="oruShV_c51Lq2GvQ4J1f-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="oruShV_c51Lq2GvQ4J1f-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Dispute" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-15" edge="1" parent="1" source="oruShV_c51Lq2GvQ4J1f-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="oruShV_c51Lq2GvQ4J1f-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Adjudicate" vertex="1">
+          <mxGeometry height="60" width="120" x="630" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Vote" vertex="1">
+          <mxGeometry height="60" width="120" x="830" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-9" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Claimant" vertex="1">
+          <mxGeometry height="60" width="30" x="245" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-10" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Challenger" vertex="1">
+          <mxGeometry height="60" width="30" x="465" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-11" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Juror" vertex="1">
+          <mxGeometry height="60" width="30" x="675" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oruShV_c51Lq2GvQ4J1f-12" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Voter" vertex="1">
+          <mxGeometry height="60" width="30" x="875" y="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,62 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="GwoBQwBjS8WMUmzuW_-9">
+    <mxGraphModel dx="1278" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="360" width="200" x="710" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="360" width="200" x="250" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Claimant" vertex="1">
+          <mxGeometry height="60" width="30" x="80" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Challenger" vertex="1">
+          <mxGeometry height="60" width="30" x="1030" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-12" edge="1" parent="1" source="HuI0NwdT3am-zp2V0lPo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="HuI0NwdT3am-zp2V0lPo-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Bond" vertex="1">
+          <mxGeometry height="80" width="60" x="320" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-14" edge="1" parent="1" source="HuI0NwdT3am-zp2V0lPo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="HuI0NwdT3am-zp2V0lPo-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-4" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="C-Bond" vertex="1">
+          <mxGeometry height="80" width="60" x="780" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-5" edge="1" parent="1" source="HuI0NwdT3am-zp2V0lPo-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="HuI0NwdT3am-zp2V0lPo-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-6" connectable="0" parent="HuI0NwdT3am-zp2V0lPo-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Deposit" vertex="1">
+          <mxGeometry relative="1" x="0.02" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-7" edge="1" parent="1" source="HuI0NwdT3am-zp2V0lPo-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="HuI0NwdT3am-zp2V0lPo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-8" connectable="0" parent="HuI0NwdT3am-zp2V0lPo-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Deposit" vertex="1">
+          <mxGeometry relative="1" x="-0.0154" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Claim" vertex="1">
+          <mxGeometry height="130" width="80" x="310" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Dispute" vertex="1">
+          <mxGeometry height="130" width="80" x="770" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No verification step required" vertex="1">
+          <mxGeometry height="30" width="160" x="270" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="HuI0NwdT3am-zp2V0lPo-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Require amount of jurors" vertex="1">
+          <mxGeometry height="30" width="140" x="740" y="530" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
