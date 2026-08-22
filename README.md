@@ -1,3 +1,4 @@
+```text
 📁assets: Thư mục lưu hình ảnh 
 📁contracts: Thư mục lưu trữ smart contracts 
 📁core: Thư mục lưu mã nguồn front end để tương tác
@@ -6,3 +7,4 @@
 📁paper: Báo cáo kỹ thuật 
 📁simulation: Thư mục lưu các mô phỏng 
 📁storage: Nơi lưu thông tin chung giữa core, contracts và simulation
+```
