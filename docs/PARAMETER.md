@@ -14,3 +14,4 @@ R = F(B) = B
 ## Để mô phỏng schelling point, ta dùng hàm trị tuyệt đối:
 Giả sử ta có miền chạy trong khoảng từ -s <= x <= s Lúc này thì ta có 40% âm và 60% dương khi tính tích phân.
 
+![](../paper/assets/absolute.png)
