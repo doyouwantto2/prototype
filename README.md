@@ -5,6 +5,6 @@
 📁diagrams: Thư mục lưu biểu đồ của drawio
 📁docs: Thư mục lưu các bản nháp
 📁paper: Báo cáo kỹ thuật 
-📁simulation: Thư mục lưu các mô phỏng 
+📁simulation: Nơi thực hiện các mô phỏng 
 📁storage: Nơi lưu thông tin chung giữa core, contracts và simulation
 ```
