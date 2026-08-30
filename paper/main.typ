@@ -4,10 +4,6 @@
 
 = Giới thiệu
 
-*Tiếng Việt:* Cơ chế phân xử phi tập trung cho các tuyên bố về thời điểm tồn tại của tác phẩm số trên Internet.
-
-*Tiếng Anh:* Decentralized Dispute Resolution for Timestamp Claims of Digital Works on the Internet
-
 == Động lực nghiên cứu
 
 Sự phát triển của internet đã giúp cho mọi người tiếp cận thông tin một cách nhanh chóng và tiện lợi hơn, nhưng cũng đi kèm thách thức về việc quản lý nội dung số được công bố. Một khi đã đưa lên internet thì ta không thể kiểm soát được hành vi của người dùng.
@@ -46,7 +42,7 @@ Trong phạm vi nghiên cứu, blockchain và smart contract sẽ là nền tả
 
 == Mô hình phân xử
 
-Kleros có thể xem là ví dụ tiêu biểu về mô hình trọng tài phi tập trung. #cite(<lesaege2020kleros>) Khi có tranh chấp thì họ sẽ gọi ngẫu nhiên các trọng tài và tùy thuộc vào lượng stake mà tỷ lệ được bầu chọn sẽ cao hơn, nếu trọng tài nào đưa ra phán quyết khác với kết quả cuối cùng thì sẽ bị slash vì vậy nó buộc các trọng tài khác phải tìm phương hướng đồng thuận.#cite(<ravikant2019schelling>) Nếu muốn tái xét xử thì người dùng có thể tiếp tục đặc cọc stake để mở thêm 1 phiên điều trần nữa với số lượng bồi thẩm đoàn lớn hơn.
+Kleros có thể xem là ví dụ tiêu biểu về mô hình trọng tài phi tập trung. #cite(<lesaege2020kleros>) Khi có tranh chấp thì họ sẽ gọi ngẫu nhiên các trọng tài và tùy thuộc vào lượng stake mà tỷ lệ được bầu chọn sẽ cao hơn, nếu trọng tài nào đưa ra phán quyết khác với kết quả cuối cùng thì sẽ bị slash vì vậy nó buộc các trọng tài khác phải tìm phương hướng đồng thuận.#cite(<ravikant2019schelling>)
 
 Hiện tại Kleros chỉ có một tầng phán quyết duy nhất, vẫn thiếu một một tầng hậu kiểm độc lập để đánh giá việc phán xử của các trọng tài do đó nghiên cứu này sẽ ứng dụng cơ chế bồi thẩm đoàn của Kleros, song song với bổ sung thêm một cơ chế đánh giá các trọng tài.
 
@@ -70,7 +66,7 @@ Cơ chế tính điểm danh tiếng sẽ khác nhau tùy thuộc vào miền b�
 
 === Dispute game
 
-Dispute game là một cơ chế trò chơi được sử dụng để giải quyết tranh chấp giữa các bên thông qua một tập luật xác định trước, trong đó hai bên cùng thế chấp tài sản. Trong các mô hình blockchain, Optimism là kiến trúc tiêu biểu nhất khi nó mặc định mọi giao dịch là hợp lệ cho đến khi được chứng minh là sai, trong quá trình đó các đối tượng sẽ có thê mở dispute game với các giao dịch mà họ cho là không hợp lệ. #cite(<optimismDisputeGameInterface>)
+Dispute game là một cơ chế trò chơi được sử dụng để giải quyết tranh chấp giữa các bên thông qua một tập luật xác định trước, trong đó hai bên cùng thế chấp tài sản. Mọi giao dịch được xem là hợp lệ cho đến khi bị chứng minh là sai, trong quá trình đó các đối tượng sẽ có thê mở dispute game với các giao dịch mà họ cho là không hợp lệ. #cite(<optimismDisputeGameInterface>)
 
 Trong nghiên cứu này lời tuyên bố về thời điểm công bố tác phẩm chính là đối tượng tranh chấp được xoay quanh. Tương tự như cách mà Veracity thiết lập cơ chế với hai vai trò đối kháng là Creator và Challenger. #cite(<barbosa2025newincentivemodelcontenttrust>)
 
@@ -96,15 +92,13 @@ Veracity có thể được xem là nghiên cứu có nhiều điểm tương đ
 
 Thêm vào đó thì vấn đề mà Veracity lẫn nghiên cứu này nhắm tới là kiểm chứng thông tin nhưng phục vụ cho hai đối tượng khác nhau. Veracity muốn kiểm tra nội dung có đáng tin cậy, có đạo văn, AI-generate hay không, tức fact check còn nghiên cứu hiện tại muốn xác định liệu tác phẩm này có đúng là đã tồn tại ở thời điểm đó đúng như lời tuyên bố hay không dựa trên dữ kiện từ internet.
 
-Việc ứng dụng Kleros và schelling point một cách mù quáng có thể khiến cho hệ thống trở nên khập khễnh. Do đó nghiên cứu này quyết định xây dựng thêm tầng thứ hai, tầng này không được xây dựng để thay đổi phán quyết mà là để đánh giá các trọng tài đã tham gia buổi phân xử, từ đó khiến các trọng tài phải cân nhắc ảnh hưởng của đám đông trước khi đưa ra quyết định.
+Việc áp dụng Kleros một cách mù quáng có thể khiến cho hệ thống trở nên khập khễnh. Do đó nghiên cứu này quyết định xây dựng thêm tầng thứ hai, tầng này không được xây dựng để thay đổi phán quyết mà là để đánh giá các trọng tài đã tham gia buổi phân xử, từ đó khiến các trọng tài phải cân nhắc ảnh hưởng của đám đông trước khi đưa ra quyết định.
 
 Vì chuyển trọng tâm từ tài chính sang danh tiếng, cộng thêm việc chuyển từ vai trò sang hành vi nên ta không nên chỉ định lượng giá trị tài chính và danh tiếng để đánh giá một tác nhân, mà nên dựa trên cả lịch sử hoạt động của người đó. Đây là nơi mà ta áp dụng chuỗi markov để phân tích và đánh giá hành vi của đối tượng.
 
 = Đóng góp chính
 
-Xây dựng một mô hình lấy động lực làm trung tâm trong việc xác định thời điểm công bố của một tác phẩm.
-
-Nghiên cứu không ngầm định mọi đối tượng tham gia đều chính trực và cũng không ngăn chặn hành vi bất chính, mà thay vào đó là khiến việc đi ngược với cân bằng sẽ đánh đổi rủi ro và hậu quả lớn hơn so với lợi ích đạt được.
+Xây dựng một mô hình phân xử phi tập trung cho lời tuyên bố về thời điểm đăng tải tác phẩm trên internet, trong đó không phân vai trò cố định cho mỗi tác nhân tham gia mà xác định vai trò của tác nhân dựa trên hành vi của họ trong từng ngữ cảnh.
 
 = Thiết kế mô hình
 
@@ -134,6 +128,17 @@ Mỗi tác nhân có thể đóng 1 trong 4 vai trò tùy thuộc vào ngữ c�
 
 - *Viewer - Vote(V)*: Đánh giá các trọng tài sau khi đã đưa ra phán quyết.
 
+$ "Agent_i" = in (W_i, R_i, H_i) $
+
+*Trong đó:*
+
+- $W_i$: Tài sản
+
+- $R_i$: Danh tiếng
+
+- $H_i$: Lịch sử hành vi
+
+
 Khi xuất hiện 4 hành động độc lập thì ta có thể biến nó thành một trạng thái hữu hạn như sau:
 
 #figure(
@@ -143,9 +148,11 @@ Khi xuất hiện 4 hành động độc lập thì ta có thể biến nó thà
 
 Ta sẽ ứng dụng chuỗi markov trong việc xác định hành vi bất thường, đồng thời nó cũng sẽ được ứng dụng trong việc bầu chọn trọng tài, vì ta không nên chỉ quan tâm tới hành động hay điểm danh tiếng mà còn là thứ tự các hành động đó xuất hiện.
 
-=== Đăng tải tác phẩm (Publish)
+=== Công khai tác phẩm
 
 Để có thể đăng tải tác phẩm thì phải bỏ ra một khoản Bond. Họ có quyền tự lựa chọn mức Bond và sẽ nhận về điểm danh tiếng tương ứng với giá trị của mức Bond đó.
+
+Lưu ý ở đây Bond được gắn liền với tác phẩm, một khi đã đăng tải thì người đăng lời tuyên bố không thể rút ra. Bond đóng hai vai trò thứ nhất là gắn chặt cam kết của người đăng với yếu tố tài chính, thứ hai là tạo nguồn lực để xử lý hậu tranh chấp.
 
 $ B_min <= B <= B_max $
 
@@ -171,41 +178,58 @@ $ F(B_min) <= R = F(B) <= F(B_max) $
 
 - $F$: Hàm quy đổi tuyến tính
 
-=== Kích hoạt Dispute Game (Challenge)
+=== Mở tranh chấp
 
 Để mở tranh chấp thì người thách thức cần phải đặt cọc một khoản ngang với Bond của tác phẩm đang muốn tranh chấp là $B_C$.
 
 Biết rằng $B_C = B$ nên ta có thể quy đổi ra $B$ và áp dụng cách tính điểm danh tiếng tương tự.
 
-Nếu Challenger thắng thì họ sẽ nhận được 60% giá trị của khoản Bond và điểm danh tiếng tương ứng được quy đổi qua $F(B_C)$. Nếu thua thì họ sẽ mất điểm danh tiếng cũng như $B_C$.
+Nếu Challenger thắng thì họ sẽ nhận được $G$% giá trị của khoản Bond và điểm danh tiếng tương ứng được quy đổi qua $F(B_C)$. Nếu thua thì họ sẽ mất điểm danh tiếng cũng như $B_C$.
 
-Claimant được xử thắng nhận được 60% giá trị $B_C$, không nhận điểm danh tiếng. Lý do là vì trong một số trường hợp Claimant có thể thông đồng với một số challenger khác dàn dựng dispute và xử Claimant thắng từ đó qua mặt được chuỗi Markov để tăng điểm danh tiếng, và việc Challenger sai cũng không đồng nghĩa với việc Claimant đúng do đó ta không nên tăng điểm bởi một Claim có thể bị thách thức nhiều lần.
+Claimant được xử thắng nhận được $G$% giá trị $B_C$, không nhận điểm danh tiếng. Lý do là vì trong một số trường hợp Claimant có thể thông đồng với một số challenger khác dàn dựng dispute và xử Claimant thắng từ đó qua mặt được chuỗi Markov để tăng điểm danh tiếng, và việc Challenger sai cũng không đồng nghĩa với việc Claimant đúng do đó ta không nên tăng điểm bởi một Claim có thể bị thách thức nhiều lần.
 
 #figure(
   image("../diagrams/oppose.drawio.png", width: 100%),
   caption: [],
 ) <fig-oppose.drawio>
 
-=== Phân xử (Adjudicate)
+=== Phân xử
 
 Gọi $M$ là số lượng trọng tài được lựa chọn trong mỗi vụ tranh chấp, với $M$ là số lẻ.
 
-Hệ thống sẽ chọn lọc 20% những người có điểm danh tiếng cao nhất trong hệ thống. Sau khi số người chấp nhận tham gia lớn hơn hoặc bằng $M$ thì hệ thống lại tiếp tục chọn ngẫu nhiên trong số những người tham gia sao cho số lượng bằng M.
+Hệ thống sẽ chọn lọc 20% những người có điểm danh tiếng cao nhất trong hệ thống với điểm danh tiếng lớn hơn 0. Sau khi số người chấp nhận tham gia lớn hơn hoặc bằng $M$ thì hệ thống lại tiếp tục chọn ngẫu nhiên trong số những người tham gia sao cho số lượng bằng M.
 
 Trong quá trình chọn ra M người thì hệ thống sẽ truy vết lịch sử của chuỗi Markov xem có hành vi đáng ngờ hay không. Tỷ lệ lựa chọn sẽ thay đổi dựa trên việc họ đã tham gia phân xử bao nhiêu lần và các hành vi của họ trong quá khứ.
 
-Trạng thái khởi đầu của một hành vi sẽ bao gồm:
+Ma trận ban đầu sẽ được biểu diễn như sau:
 
 $
   mat(
-    P;
-    C;
-    A;
-    V;
+    P(P|P), P(P|C), P(P|A), P(P|V);
+    P(C|P), P(C|C), P(C|A), P(C|V);
+    P(A|P), P(A|C), P(A|A), P(A|V);
+    P(V|P), P(V|C), P(V|A), P(V|V);
   )
 $
 
-Tất cả $M$ trọng tài sẽ đưa ra biểu quyết cuối cùng về việc ai sẽ là bên thắng. 40% giá trị của tài sản bên thua sẽ được chia đều cho các trọng tài, 60% còn lại được nhường cho bên thắng.
+Ma trận khởi điểm cũng sẽ trở thành:
+
+Ta nên nhân ma trận bởi vì dù markov là memoryless nhưng chuỗi hành vi của một tác nhân trong quá khứ cũng rất quan trọng.
+
+$
+  mat(
+    P(P);
+    P(C);
+    P(A);
+    P(V);
+  )
+$
+
+Với $P(P) + P(C) + P(A) + P(V)$ = 1
+
+Có 4 vector chính là P, C, A, V. Nếu mỗi vector đang chĩa về một phía thì sẽ có xác suất rẽ nhánh ra, còn nếu không thì có thể bị liệt kê vào một số hành vi đáng ngờ và giảm xác suất được lựa chọn làm trọng tài.
+
+Tất cả $M$ trọng tài sẽ đưa ra biểu quyết cuối cùng về việc ai sẽ là bên thắng. $(1-G)$% giá trị của tài sản bên thua sẽ được chia đều cho các trọng tài, $G$% còn lại được nhường cho bên thắng.
 
 Nếu trọng tài vote theo bên có đồng thuận đa số thì họ sẽ nhận được tiền thưởng chia đều, còn nếu không thì sẽ không được nhận thưởng. Tương tự như cách Kleros #cite(<lesaege2020kleros>) áp dụng schelling point. #cite(<ravikant2019schelling>)
 
@@ -217,19 +241,13 @@ $B$ càng lớn thì $M$ phải càng lớn vì nếu quá thấp lợi nhuận 
 
 Sau khi đưa ra phán quyết thì buổi tranh chấp chuyển sang trạng thái đánh giá, vì lúc này phán quyết là không thể đảo ngược.
 
-=== Bỏ phiếu đánh giá (Vote)
+=== Đánh giá trọng tài
 
-==== Trò chơi thiếu thông tin
+==== Thông tin không đầy đủ
 
 Hệ thống hiện tại cho phép bỏ phiếu tự do, tải sản duy nhất chịu rủi ro đó là điểm danh tiếng. Bất cứ ai vote gần với trung vị thì sẽ nhận được điểm cao hơn, càng xa trung vị thì điểm càng thấp.
 
-Tuy nhiên để tránh tình trạng sybil farm điểm hoặc tối ưu hóa lợi ích thay vì đánh giá buổi phân xử, ta áp dụng quy tắc của trò chơi poisson. #cite(<myerson1998population>) Khi bắt đầu quá trình bỏ phiếu mỗi người sẽ đánh giá trọng tài trong phạm vi $-1 <= v_i <= 1$, không ai biết điểm số của nhau, số lượng người vote cũng sẽ được ẩn. Chỉ sau khi hết giờ thì mới công bố toàn bộ số điểm cũng như số lượng người tham gia bỏ phiếu đánh giá.
-
-Điều này khiến cho người chơi phải ước lượng số người chơi thực sự tham gia. Giả sử ta gọi $K$ là ước lượng người chơi sẽ tham gia bỏ phiếu cho buổi phân xử đó, vì ta không biết số người thực sự tham gia là bao nhiêu nên ta có thể quy ước: #cite(<myerson1998population>)
-
-$ E[K] approx N $
-
-Với $N$ là số người tồn tại trong hệ thống.
+Khi bắt đầu quá trình bỏ phiếu mỗi người sẽ đánh giá trọng tài trong phạm vi $-1 <= v_i <= 1$, không ai biết điểm số của nhau, số lượng người vote cũng sẽ được ẩn. Chỉ sau khi hết giờ thì mới công bố toàn bộ số điểm cũng như số lượng người tham gia bỏ phiếu đánh giá.
 
 Hệ thống sau đó sẽ lọc ra những người có điểm danh tiếng mang giá trị nguyên dương và nguyên âm. Những người có điểm nguyên âm sẽ được lọc ra, những người có điểm nguyên dương sẽ được đưa vào danh sách để xét điểm trung vị. Các hàm để biểu diễn các thuộc tính kể trên được giải thích theo như mô tả bên dưới:
 
@@ -260,12 +278,16 @@ Vì độ cao cố định bằng 1 nên dù điều chỉnh thế nào thì gi�
 
 Điểm danh tiếng mà một Viewer sẽ nhận được tương đương với:
 
-$ Delta R_i = D dot phi(|v_i - "median"|) $
+$ Delta R_v = D dot phi(|v_i - "median"|) $
 
 *Trong đó:*
 
 - $D$: Là hạn mức điểm nhận được khi vote
 - $"median"$: Trung vị của các giá trị $v_i in V$.
+
+Điểm danh tiếng của Viewer sẽ được cập nhật thành:
+
+$ R_v = R_v underline(+) Delta R_v $
 
 ==== Cơ chế phạt bất đối xứng
 
@@ -276,7 +298,7 @@ Một vấn đề nữa đó là nếu xây dựng cơ chế đánh giá với t
 Ta sẽ không dựa trên $v_i$ của Viewer để ra kết quả cuối mà dựa theo trung vị. Điều này giúp ta hạn chế phần nào việc một vài lá phiếu quyết định toàn bộ kết quả. Ta có:
 
 $
-  overline(R) = dot frac(1, K) dot sum_(i=1)^K R_i
+  overline(R) = dot frac(1, N) dot sum_(i=1)^K R_i
 $
 
 Điểm danh tiếng tác động lên Juror là:
@@ -299,72 +321,45 @@ $
 $
   R_j = cases(
     R_j + Delta R_j & "nếu" R_j > 0 "và" Delta R > 0,
-    R_j + Delta R_j dot S & "nếu" R_j > 0 "và" Delta R < 0,
+    R_j + Delta R_j dot S' & "nếu" R_j > 0 "và" Delta R < 0,
     R_j + Delta R_j & "nếu" R_j < 0 "và" Delta R < 0,
     R_j + Delta R_j dot S & "nếu" R_j < 0 "và" Delta R > 0,
   )
 $
 
-Với $S$ là độ nhạy.
+*Trong đó:*
+
+- $S$ là độ nhạy khi tăng ở mức âm ($S > 0$)
+
+- $S'$ là độ nhạy khi giảm ở mức dương ($S > 0$)
+
 
 Đây là cơ chế cân bằng cũng như dự phòng của hệ thống, nếu như điểm quá thấp hay quá cao thì sẽ có cơ chế tự cân bằng lại. Cơ chế này chỉ áp dụng với các trọng tài.
 
-== Vòng đời của một tuyên bố
+== Vị trí của từng tác nhân
 
-Một claim không nên được biểu diễn theo dạng tuyến tính mà nên được biểu diễn theo một vòng đời #cite(<li2026records>), vì truy vết nội dung trước khi đưa vào chain rất tốn kém. Việc thực hiện cơ chế lạc quan #cite(<umaOptimisticOracle>) cho phép ta mở rộng phạm vi, đồng thời nếu có tranh chấp trong tương lai ta vẫn có thể thay đổi trạng thái của chúng.
+Một claim không nên được biểu diễn theo dạng tuyến tính mà nên được biểu diễn theo một vòng đời #cite(<li2026records>), vì truy vết nội dung trước khi đưa vào chain phải trải qua nhiều công đoạn. Việc thực hiện cơ chế lạc quan #cite(<umaOptimisticOracle>) cho phép ta mở rộng phạm vi, đồng thời nếu có tranh chấp trong tương lai ta vẫn có thể thay đổi trạng thái của chúng.
 
-Đồng thời hệ thống cũng không có cơ chế tái xét xử, phán quyết một khi đã đưa ra là không thể đảo ngược. Đây là một trade-off của hệ thống trong đó phán quyết sai vẫn có thể xảy ra, chính vì vậy đôi khi phải tạo thêm Claim mới.
+Tuy nhiên có một nhược điểm đó là trò chơi hiện tại không bao gồm cơ chế tái xét xử do đó một khi kết quả đã được đưa ra thì không thể khôi phục nguyên trạng như trước kia.
 
 #figure(
-  image("../diagrams/claim-lifecycle.drawio.png", width: 60%),
+  image("../diagrams/claim-lifecycle.drawio.png", width: 50%),
   caption: [],
 ) <fig-claim-lifecycle.drawio>
 
-Vị trí mà các tác nhân có thể tham gia.
+Mỗi vai trò chỉ được kích hoạt trong một số ngữ cảnh nhất định. Ở đây ta mô hình hóa vai trò tương ứng với 4 hành vi, trong mỗi sự kiện bắt đầu từ việc công khai Claim thì mỗi vai trò sẽ được kích hoạt. 4 vai trò ở đây xuất hiện theo trình tự các sự kiện được biểu diễn như hình bên dưới:
 
 #figure(
   image("../diagrams/sequence.drawio.png", width: 80%),
   caption: [],
 ) <fig-sequence.drawio>
 
-Trạng thái của claim sẽ di chuyển theo quy trình dưới đây:
+Trạng thái của một Claim sẽ được biểu diễn như một vòng đời. #cite(<li2026records>) Một khi đã đăng tải Claim thì trạng thái sẽ được chuyển thành Active, và một tranh chấp nếu đang xảy ra thì không được phép có tranh chấp khác xuất hiện cùng cùng một thời điểm với Claim đó. Sau khi đưa ra phán quyết thì sẽ mở một phiên hậu kiểm nhằm đánh giá phán quyết của các trọng tài.
 
 #figure(
-  image("../diagrams/finite-state.drawio.png", width: 80%),
+  image("../diagrams/finite-state.drawio.png", width: 60%),
   caption: [],
 ) <fig-finite-state.drawio>
-
-Việc vote chỉ diễn ra sau khi phán quyết của buổi tranh chấp được đưa ra và không thể đảo ngược.
-
-= Phân tích thông số
-
-== Kỳ vọng điểm danh tiếng
-
-- Khi publish thì họ sẽ nhận được lượng điểm danh tiếng tương ứng với số Bond đã đặt cọc. Nếu có người mở tranh chấp và xử thắng thì lượng điểm danh tiếng của người đăng sẽ bị trừ và mất toàn bộ Bond. Ngược lại nếu người thách thức bị xử thua thì điểm danh tiếng sẽ không được cộng cho claiman nhưng họ sẽ nhận được 60% số tiền từ cuộc tranh chấp.
-
-- Claimant có bond thì challenger có Counter-Bond, và điểm danh tiếng chịu rủi ro của hai bên là như nhau. Claimant chịu rủi ro có thể bị thách thức nhiều lần bất cứ lúc nào, còn challenger thì chịu rủi ro phải chứng minh.
-
-- Voter đánh giá adjudicator nhưng voter sẽ nhận điểm danh tiếng tương ứng với điểm trung vị. (có thể âm)
-
-- Điểm của adjudicator được đánh giá bằng kết quả trung vị nhân cho sigmoid của điểm danh tiếng của người vote.
-
-- Nếu điểm danh tiếng của người vote bé hơn bằng bằng 0 thì họ vẫn được nhận điểm danh tiếng dựa theo trung vị (vẫn có thể âm), nhưng khi xét trung vị họ sẽ bị loại ra ngoài và xếp vào một hàng riêng, để chỗ xét trung vị cho những người có điểm danh tiếng dương.
-
-== Kỳ vọng tài chính
-
-Chỉ có hai hành vi chịu tác động tài chính đó là Claimant và Challenger.
-
-Giả sử claimant bỏ tiền ra để đăng tải tác phẩm của mình thì challenger sẽ là bên cũng phải bỏ tiền cọc ra để gỡ bỏ claim đó. Có thể có 3 mục đích, phá claim, phát hiện sự thiếu minh bạch và muốn gỡ bỏ, chiếm đoạt bond. Hoặc có thể là nhiều yếu tố cộng lại.
-
-Giả sử challenger được xử thắng thì họ sẽ nhận được 60% giá trị của bond. 40% còn lại sẽ được chia ra để thưởng cho các trọng tài.
-
-Giả sử challenger bị xử thua thì claimant sẽ nhận được 60% counter-bond, 40% còn lại sẽ được chia ra để thưởng cho các trọng tài.
-
-40% giá trị tài sản bên thua sẽ được chia đều cho các trọng tài bỏ phiếu đa số, trọng tài nào bỏ phiếu ngược với số đông thì sẽ không nhận được phần thưởng.
-
-Việc có cơ chế vote sau khi ra phán quyến khiến trọng tài phải cân nhắc và đạt được đồng thuận.
-
-Trong Kleros thì để tránh mất tiền, các trọng tài sẽ cùng đạt dồng thuận dựa trên ý kiến của các juror khác, do đó kết quả phụ thuộc vào việc số đông đang nghĩ gì chứ không hoàn toàn dựa vào sự thật khách quan. Trong khi đó việc đưa thêm cơ chế bỏ phiếu bổ sung khiến cho các trọng tài phải cân nhắc thêm khả năng làm trọng tài trong tương lai và lợi ích tài chính trước mắt.
 
 == Động lực của mỗi vai trò
 
@@ -372,10 +367,10 @@ Trong Kleros thì để tránh mất tiền, các trọng tài sẽ cùng đạt
   table(
     columns: 2,
     [Vai trò], [Rủi ro],
-    [Claimant], [],
-    [Challenger], [],
-    [Juror], [],
-    [Viewer], [],
+    [Claimant], [Lời tuyên bố (Điểm danh tiếng + Tiền)],
+    [Challenger], [Điểm danh tiếng + Tiền],
+    [Juror], [Điểm danh tiếng với trọng số lớn],
+    [Viewer], [Điểm danh tiếng với trọng số nhỏ],
   ),
 )
 
@@ -401,26 +396,55 @@ Trong Kleros thì để tránh mất tiền, các trọng tài sẽ cùng đạt
 
 == Chuỗi hành vi
 
-Trong trò chơi hiện tại thì ta có thể kiếm điểm danh tiếng thông qua 4 hành vi sau:
+Trong chuỗi Markov một hành vi có thể được chuyển từ trạng thái này sang trạng thái khác với một tỷ lệ nhất định. Một số hành vi có thể được xem là bất thường như sau:
 
-Trong chuỗi Markov một hành vi có thể được chuyển từ trạng thái này sang trạng thái khác với một tỷ lệ nhất định.
+#figure(
+  grid(
+    columns: 2,
+    row-gutter: 1em,
+    column-gutter: 3em,
+    [  #table(
+        columns: 5,
+        [], [P(P)], [P(C)], [P(A)], [P(V)],
+        [P(P)], [1], [0], [0], [0],
+        [P(C)], [0], [0], [0], [0],
+        [P(A)], [0], [0], [0], [0],
+        [P(V)], [0], [0], [0], [0],
+      ),
+    ],
+    [  #table(
+        columns: 5,
+        [], [P(P)], [P(C)], [P(A)], [P(V)],
+        [P(P)], [0], [0], [0], [0],
+        [P(C)], [0], [1], [0], [0],
+        [P(A)], [0], [0], [0], [0],
+        [P(V)], [0], [0], [0], [0],
+      ),
+    ],
 
-- Publish(P):
-
-- Challenge(C):
-
-- Adjudicate(A):
-
-- Vote(V):
-
-#table(
-  columns: 5,
-  [], [P], [C], [A], [V],
-  [P], [], [], [], [],
-  [C], [], [], [], [],
-  [A], [], [], [], [],
-  [V], [], [], [], [],
+    [  #table(
+        columns: 5,
+        [], [P(P)], [P(C)], [P(A)], [P(V)],
+        [P(P)], [0], [0], [0], [0],
+        [P(C)], [0], [0], [0], [0],
+        [P(A)], [0], [0], [1], [0],
+        [P(V)], [0], [0], [0], [0],
+      ),
+    ],
+    [  #table(
+        columns: 5,
+        [], [P(P)], [P(C)], [P(A)], [P(V)],
+        [P(P)], [0], [0], [0], [0],
+        [P(C)], [0], [0], [0], [0],
+        [P(A)], [0], [0], [0], [0],
+        [P(V)], [0], [0], [0], [1],
+      ),
+    ],
+  ),
+  caption: [Những thông số bất thường],
 )
+
+Lý do có thể adjudicate từ đầu là vì hệ thống cho phép điểm danh tiếng âm, vậy nên dù khá khó xảy ra nhưng về mặt logic một người khi mới tham gia hệ thống dù không làm gì nhiều vẫn có thể đủ điều kiện làm trọng tài nếu điểm danh tiếng lúc đó > 0.
 
 = Evaluation
 
@@ -439,6 +463,10 @@ Ta sử dụng ipfs để lưu thứ nhất là link dẫn đến đường dẫ
 = Discussion
 
 == Security and Economic Considerations
+
+Hiện tại hệ thống về mặt logic cho phép được bầu làm trọng tài nếu ở mức âm. Dù điều đó có thể gây ra spam.
+
+Đề xuất áp dụng cơ chế phạt lũy tiến, trong đó để có thể tiếp tục Publish hoặc Challenge thì buộc phải trả phí đi kèm với mức Bond. Điểm danh tiếng càng thấp thì chi phí để thực hiện publish hay challenge sẽ càng cao. #cite(<Mantzonis2026RepStake>) Tuy nhiên hiện tại mới chỉ dừng ở mức ý tưởng, chưa có phương thức cụ thể.
 
 == Transaction fee and rolls-up
 
