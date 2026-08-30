@@ -1,4 +1,4 @@
-# Các thư mục chính
+# Vai trò của các thư mục 
 ```text
 📁assets: Thư mục lưu hình ảnh chung
 📁contracts: Thư mục lưu trữ smart contracts 
@@ -10,7 +10,7 @@
 📁storage: Nơi lưu thông tin chung giữa core, contracts và simulation
 ```
 
-## Vai trò của các thư mục:
+## Các thư mục chính:
 ```text
 📁core: Thư mục chứa dự án bao gồm FE và BE. 
 
